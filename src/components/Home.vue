@@ -10,7 +10,7 @@
       <div class="tagline">
         <span class="tagline-item">Pianist </span>
         <span class="tagline-divider">/ </span>
-        <span class="tagline-item">Repetiteur </span>
+        <span class="tagline-item">Répétiteur </span>
         <span class="tagline-divider">/ </span>
         <span class="tagline-item">Teacher</span>
       </div>
