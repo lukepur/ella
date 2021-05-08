@@ -20,8 +20,11 @@
         </div>
       </div>
       <div class="contact">
-        <div class="p"><a href="tel:0435738743">0435 738 743</a></div>
-        <div class="e"><a href="mailto:enquiries@ellaluhtasaari.com">enquiries@ellaluhtasaari.com</a></div>
+        <button class="show-contact" v-on:click="toggleContact">Show contact details</button>
+        <div v-if="showContactDetails">
+          <div class="p"><a href="tel:0435738743">0435 738 743</a></div>
+          <div class="e"><a href="mailto:enquiries@ellaluhtasaari.com">enquiries@ellaluhtasaari.com</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -32,6 +35,12 @@ export default {
   name: 'home',
   data () {
     return {
+      showContactDetails: false
+    }
+  },
+  methods: {
+    toggleContact: function () {
+      this.showContactDetails = !this.showContactDetails
     }
   }
 }
@@ -63,10 +72,6 @@ export default {
     margin-top: 30px;
   }
 
-  .tagline-item {
-
-  }
-
   .tagline-divider {
     color: #d3d3d3;
     font-size: 200%;
@@ -76,6 +81,16 @@ export default {
 
   .location {
     margin-top: 40px;
+  }
+
+  .show-contact {
+    border: none;
+    background: none;
+    color: #617181;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 20px 0 0px;
   }
 
   .p, .e {
